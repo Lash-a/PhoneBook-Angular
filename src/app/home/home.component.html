@@ -1,0 +1,14 @@
+<div *ngIf="!registrationService.loggedIn" class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="text-center">Log in to continue...</h2>
+    </div>
+     <div class="col-md-12">
+      <app-login></app-login>
+     </div>
+  </div>
+</div>
+
+<div *ngIf="registrationService.loggedIn">
+  <app-contacts></app-contacts>
+</div>

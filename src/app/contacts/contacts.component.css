@@ -1,0 +1,46 @@
+i::before{
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.fa-trash{
+    color: rgba(255, 255, 255, 0.87)
+}
+
+.fa-user-edit{
+    color: rgba(255, 255, 255, 0.87)
+}
+
+a i:hover{
+    color: #64B5F6;
+}
+
+a{
+    cursor: pointer;
+    text-decoration: none;
+    color: #3b8123;
+}
+
+h5{
+    background: #191919;
+    margin: 0;
+    color: #fff;
+    padding: 5px 18px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.p-input-icon-left i {
+    left: calc(100% - 25px);
+}
+
+.card{
+    border: none;
+}
+
+.p-component{
+    border-radius: 0 0 10px 10px;
+}

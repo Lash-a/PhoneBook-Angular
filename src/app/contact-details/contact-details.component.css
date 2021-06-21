@@ -1,0 +1,45 @@
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2%;
+}
+
+label{
+    display: block;
+}
+
+input {
+    width: 200px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.btn-save{
+    width: 120px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid;
+    color: #fff;
+    background: #212529;
+    cursor: pointer;
+}
+
+/* ng styles */
+
+input.ng-invalid.ng-touched{
+    border: 2px solid #ff1919;
+}
+
+button:disabled{
+    opacity: 0.5;
+}
+
+.btn-save{
+    margin: 10px 0;
+}

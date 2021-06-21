@@ -1,0 +1,69 @@
+<div *ngIf="!loggedIn">
+  <div class="container">
+      <div class="row">
+          <div class="col-md-12">
+              <form #form="ngForm" (submit)="submited(form)">
+  
+                  <div class="form-group">
+                      <label for="firstName">First Name</label>
+                      <input 
+                      class="form-control "
+                      type="text" 
+                      name="firstName" 
+                      id="firstName"
+                      [(ngModel)]="service.firstName"
+                      required
+                      >
+                  </div>
+  
+                  <div class="form-group">
+                      <label for="lastName">Last Name</label>
+                      <input 
+                      class="form-control "
+                      type="text" 
+                      name="lastName" 
+                      id="lastName"
+                      [(ngModel)]="service.lastName"
+                      required>
+                  </div>
+                  
+                  <div class="form-group">
+                      <label for="email">Email</label>
+                      <input 
+                      class="form-control"
+                      type="email" 
+                      name="email" 
+                      id="email"
+                      #email="ngModel"
+                      pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" 
+                      [(ngModel)]="service.email"
+                      required
+                      >
+                  </div>
+                
+                  <div class="form-group">
+                      <label for="password">Password</label>
+                      <input type="password"
+                      class="form-control"
+                      name="password"
+                      id="password"
+                      #password="ngModel"
+                      [(ngModel)]="userPassword"
+                      minlength="5">
+                  </div>
+                   
+                  <button class="btn btn-success">Sign Up</button>
+<!-- 
+                  <div class="errorMsg" *ngIf="responseMesseage != ''" (click)="show()">
+                       {{responseMesseage}}
+                  </div> -->
+                 
+              </form>
+          </div>
+      </div>
+  </div>
+</div>
+
+<p-toast key="success" position="bottom-center" [showTransitionOptions]="'0ms'" [hideTransitionOptions]="'0ms'"></p-toast>
+<p-toast key="fieldError" position="bottom-center" [showTransitionOptions]="'0ms'" [hideTransitionOptions]="'0ms'"></p-toast>
+<p-toast key="emailError" position="bottom-center" [showTransitionOptions]="'0ms'" [hideTransitionOptions]="'0ms'"></p-toast>

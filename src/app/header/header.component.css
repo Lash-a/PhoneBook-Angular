@@ -1,0 +1,15 @@
+.navbar-brand{
+  margin-left: 10%;
+}
+.fa-phone-alt:before{
+  margin-right: 10px;
+}
+  
+.justify-right{
+  justify-content: flex-end;
+  margin-right: 5%;
+}
+
+a :hover{
+  color: #fff;
+}

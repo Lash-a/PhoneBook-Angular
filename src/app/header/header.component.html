@@ -1,0 +1,30 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" routerLink="/">PhoneBook <i class="fas fa-address-book"></i></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse justify-right" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      
+      <a *ngIf="!registrationService.loggedIn" 
+      class="nav-item nav-link" 
+      routerLink="/" 
+      [routerLinkActive]="['active']" 
+      [routerLinkActiveOptions]="{exact: true}">Home</a>
+
+      <a *ngIf="registrationService.loggedIn"  
+      class="nav-item nav-link"
+      routerLink="/contacts" 
+      [routerLinkActive]="['active']">Contacts</a>
+
+      <div *ngIf="!registrationService.loggedIn" style="display: inherit;">
+        <a class="nav-item nav-link" routerLink="/signup" [routerLinkActive]="['active']">Sign Up <i class="fas fa-user-plus"></i></a>
+      </div>
+
+      <div *ngIf="registrationService.loggedIn" style="display: inherit;">
+        <a class="nav-item nav-link" routerLink="/login" [routerLinkActive]="['active']" (click)="logOut()">Log Out <i class="fas fa-sign-out-alt"></i></a>
+      </div>
+
+    </div>
+  </div>
+</nav>
